@@ -2,10 +2,8 @@
 {
 
     using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using System.ComponentModel.DataAnnotations;
+
 
     public class Product
     {
@@ -32,19 +30,7 @@ using System.Threading.Tasks;
         [DataType(DataType.Date)]
         public DateTime PublishOn { get; set; }
 
-        public string ImageFullPath
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(this.ImagePath))
-                {
-                    return "noproduct";
-                }
-
-                return $"https://salesbackend.azurewebsites.net/{this.ImagePath.Substring(1)}";
-            }
-
-        }
+        
 
         public override string ToString()
         {
