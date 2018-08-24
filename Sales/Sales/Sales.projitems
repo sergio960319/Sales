@@ -19,6 +19,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ApiServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ApiService.cs" />
   </ItemGroup>
 </Project>

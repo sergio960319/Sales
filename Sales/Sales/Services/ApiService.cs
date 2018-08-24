@@ -3,13 +3,13 @@
     using System;
     using System.Collections.Generic;
     using System.Net.Http;
+    using System.Text;
     using System.Threading.Tasks;
-    using Common.Models;
     using Newtonsoft.Json;
-
-    public class ApiServices
+    using Sales.Common.Models;
+    public class ApiService
     {
-        public async Task<Response> GetList<T>(string urlBase, string prefix , string controller)
+        public async Task<Response> GetList<T>(string urlBase, string prefix, string controller)
         {
             try
             {
@@ -18,6 +18,7 @@
                 var url = $"{prefix}{controller}";
                 var response = await client.GetAsync(url);
                 var answer = await response.Content.ReadAsStringAsync();
+
                 if (!response.IsSuccessStatusCode)
                 {
                     return new Response
@@ -27,11 +28,12 @@
                     };
                 }
 
-                var list = JsonConvert.DeserializeObject<List<T>> (answer) ;
+                var list = JsonConvert.DeserializeObject<List<T>>(answer);
+
                 return new Response
                 {
                     IsSuccess = true,
-                    Result = list,
+                    Result    = list,
 
                 };
             }
@@ -44,5 +46,12 @@
                 };
             }
         }
+
+
+
+
+
+
+
     }
 }
