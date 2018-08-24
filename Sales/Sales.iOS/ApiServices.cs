@@ -27,11 +27,11 @@
                     };
                 }
 
-                var list = JsonConvert.DeserializeObject<List<T>> (answer) ;
+                var list = JsonConvert.DeserializeObject<List<T>>(answer);
                 return new Response
                 {
                     IsSuccess = true,
-                    Result = list,
+                    
 
                 };
             }
