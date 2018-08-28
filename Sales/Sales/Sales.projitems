@@ -18,8 +18,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Infraestructure\InstanceLocator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ApiService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProductsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProductsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
       <SubType>Code</SubType>
