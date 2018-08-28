@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sales.Views.ProductsPage"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Products">
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding Products}"
@@ -20,16 +21,10 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Image
-                                    Grid.Column="0"
-                                    Source="{Binding ImageFullPath}"
-                                    WidthRequest="100">
-                                </Image>
+                                 </Grid.ColumnDefinitions>
                                 <Label
                                     FontAttributes="Bold"
-                                    Grid.Column="1"
+                                    Grid.Column="0"
                                     Text="{Binding Description}"
                                     VerticalOptions="Center">
                                 </Label>
